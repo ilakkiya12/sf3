@@ -6,6 +6,7 @@
 namespace AppBundle\Forms\Types;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CurrencyType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -21,6 +22,7 @@ class TicketSubmissionType extends AbstractType
             ->add('eventDate', DateType::class, [
                 'data' => new \DateTime('+1 day')
             ])
+            ->add('boughtAtPrice')
             ->add('eventDescription', TextareaType::class)
             ->add('submit', SubmitType::class, ['label' => 'Submit'])
         ;

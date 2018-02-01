@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block body %}
+    {% for ticket in tickets %}
+        <li><a class="nav-link" href="{{ path('ticket_details') }}">{{ ticket.eventName }}</a></li>
+    {% endfor %}
+{% endblock %}
